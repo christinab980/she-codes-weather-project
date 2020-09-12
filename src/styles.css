@@ -1,0 +1,103 @@
+body {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: "Oxygen", sans-serif;
+  background: #d2b7ae;
+}
+
+h1 {
+  font-size: 20px;
+  padding: 0;
+  line-height: 1;
+}
+
+h5 {
+  font-size: 20px;
+  padding: 0;
+  line-height: 1;
+}
+
+h6 {
+  font-size: 14px;
+  padding: 0;
+  line-height-step: 1;
+}
+
+p {
+  color: #d2b7ae;
+  font-size: 12px;
+}
+
+button {
+  background: #d2b7ae;
+  color: white;
+  border-radius: 15px;
+  margin-top: 45px;
+  border: none;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+.location {
+  font-size: 14px;
+  padding: 0;
+  line-height-step: 1;
+}
+.logo {
+  position: absolute;
+  right: 0;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.container {
+  background-color: white;
+  display: block;
+  width: 900px;
+  height: 620px;
+  border-radius: 30px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.search {
+  margin: 20px;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.todays-temp {
+  font-size: 12px;
+  line-height: 1;
+  padding: 0;
+  color: gray;
+}
+
+.todays-temp-now {
+  font-size: 42px;
+  position: absolute;
+  padding-top: 35px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  line-height: 1.2;
+  margin: 16px;
+}
+
+#unit {
+  font-size: 14px;
+  position: absolute;
+  padding-top: 10px;
+  padding-bottom: 80px;
+}
+
+.main-weather-emojo {
+  font-size: 100px;
+  margin: 30px;
+}
+
+.weather-emojo {
+  font-size: 30px;
+}
+
+.fa-search-location {
+  color: #d2b7ae;
+  font-size: 20px;
+}
