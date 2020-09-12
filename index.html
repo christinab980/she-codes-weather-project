@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3a6b9c9ded.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <form class="search" id="search-form">
+                <input autocomplete="off" 
+                       type="text" 
+                       class="search-query form-control" 
+                       id="search-city"
+                       placeholder="Search City"/>
+            </form>
+        </div>
+        <div class="button" id="current-location"> <button> Current </button> </div>
+         <div class="col">
+           <span class="logo">
+             <img src="images/Image_2424.png" alt="logo"
+             style="width:215; height:115px;" />
+            </span>
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <div class="card" style="width: 27rem;">
+            <div class="card-body">
+              <h1 class="card-title"> 
+                <i class="fas fa-search-location"> </i> <span id ="location" >
+                 
+              </span>
+                </h1>
+              <span id="current-date-time"> </span> 
+              <p class="card-text">
+                <span class="current-temp">High: <span id="high">  </span>°C Low: <span id="low"> </span> °C </span>
+                <br />
+                <span class="main-weather-emojo">☀️ </span>
+                <span class="todays-temp-now"> <span id = "temperature-now"> </span>  <span id = "unit">°C  </span> </span>
+                <br />
+                <span class="todays-temp">
+                  Feels Like: <span id="feel-like">84</span>°
+                  <br />
+                  Humidity: <span id="humidity">52</span>%
+                  <br />
+                  Wind: SW <span id="wind">12</span> mph
+                </span>
+</p>
+            </div>
+        </span>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="card w-100">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title">Monday</h5>
+                  <h6 id="tomorrow"> August 17 </h6>
+                </div>
+                <div class="col">
+                  89° | 71°
+                </div>
+                <div class="col">
+                  <span class="weather-emojo">☀️</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card w-100">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title">Tuesday</h5>
+                  <h6>August 18</h6>
+                </div>
+                <div class="col">
+                  89° | 73°
+                </div>
+                <div class="col">
+                  <span class="weather-emojo">☀️</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card w-100">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title">Wednesday</h5>
+                  <h6>August 19</h6>
+                </div>
+                <div class="col">
+                  93°| 71°
+                </div>
+                <div class="col">
+                  <span class="weather-emojo">☀️</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card w-100">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title">Thursday</h5>
+                  <h6>August 20</h6>
+                </div>
+                <div class="col">
+                  93° | 71°
+                </div>
+                <div class="col">
+                  <span class="weather-emojo"> 🌥 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card w-100">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title">Friday</h5>
+                  <h6>August 21</h6>
+                </div>
+                <div class="col">
+                  93° | 71°
+                </div>
+                <div class="col">
+                  <span class="weather-emojo"> 🌤</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
