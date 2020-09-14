@@ -88,6 +88,10 @@ button {
   padding-bottom: 80px;
 }
 
+#open-source-link {
+  margin: 5px;
+}
+
 .main-weather-emojo {
   font-size: 100px;
   margin: 30px;
