@@ -84,6 +84,8 @@ function changeDisplay(response) {
   document.querySelector("#low").innerHTML = Math.round(
     response.data.main.temp_min
   );
+  document.querySelector("#main-weather-emojo").setAttribute ("src", `http://openweather.org/img/wn/04d@2x.png')
+  );
 }
 
 let form = document.querySelector("#search-form");
