@@ -66,11 +66,11 @@ function getCurrentLocation(event) {
 }
 
 function changeDisplay(response) {
-  console.log(response);
   document.querySelector("#location").innerHTML = response.data.name;
   document.querySelector("#temperature-now").innerHTML = Math.round(
     response.data.main.temp
   );
+  celciusTemperature = response.data.main.temp;
 
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -86,11 +86,12 @@ function changeDisplay(response) {
     response.data.main.temp_min
   );
 
-  let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 let form = document.querySelector("#search-form");
@@ -100,3 +101,28 @@ let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 search("London");
+
+function fahrenheitConversion(event) {
+  event.preventDefault();
+  let fConversion = document.querySelector("#temperature-now");
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  fConversion.innerHTML = Math.round(fahrenheitTemperature) + "°";
+}
+
+function celciusConversion(event) {
+  event.preventDefault();
+  let fConversion = document.querySelector("#temperature-now");
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  fConversion.innerHTML = Math.round(celciusTemperature) + "°";
+}
+
+let celciusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", fahrenheitConversion);
+
+let celciusLink = document.querySelector("#celcius");
+celciusLink.addEventListener("click", celciusConversion);
