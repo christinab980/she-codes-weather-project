@@ -14,9 +14,14 @@ h1 {
 
 h3 {
   color: grey;
-  font-size: 14px;
+  font-size: 13px;
   padding: 10;
   line-height: 1;
+}
+
+h4 {
+  color: #bc9587;
+  font-size: 11px;
 }
 
 h5 {
@@ -32,7 +37,7 @@ h6 {
 }
 
 p {
-  color: #d2b7ae;
+  color: #bc9587;
   font-size: 12px;
 }
 
@@ -59,7 +64,7 @@ button {
   background-color: white;
   display: block;
   width: 460px;
-  height: 700px;
+  height: 650px;
   border-radius: 30px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
 }
@@ -80,7 +85,7 @@ button {
 .todays-temp-now {
   font-size: 42px;
   position: absolute;
-  padding-top: 35px;
+  padding-top: 20px;
   padding-right: 40px;
   padding-bottom: 40px;
   line-height: 1.2;
@@ -104,11 +109,11 @@ button {
 
 .main-weather-emojo {
   font-size: 100px;
-  margin: 30px;
+  margin: 10px;
 }
 
 .weather-emojo {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .fa-search-location {
