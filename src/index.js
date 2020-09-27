@@ -85,8 +85,12 @@ function changeDisplay(response) {
     response.data.main.temp_min
   );
 
-  let icon = document.querySelector("main-weather-emojo");
-  icon.setAttribute("src", `http://openweathermap.org/img/wn/04d@2x.png`);
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 let form = document.querySelector("#search-form");
