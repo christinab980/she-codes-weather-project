@@ -39,13 +39,13 @@
          <div class="col">
            <span class="logo">
              <img src="images/Image_2424.png" alt="logo"
-             style="width:215; height:115px;" />
+             style="width:180px; height:100px;" />
             </span>
         </div>
         
       </div>
 
-      <div class="row">
+      <div class="row" >
         <div class="col-6">
           <div class="card" style="width: 27rem;">
             <div class="card-body">
@@ -58,11 +58,11 @@
               <p class="card-text">
                 <span class="current-temp">High: <span id="high">  </span>°C Low: <span id="low"> </span> °C </span>
                 <br />
-                <img> <span class="main-weather-emojo" id="icon"></span> </img>
+                <img class="main-weather-emojo" id="icon"> </img>
                 <span class="todays-temp-now"> <span id = "temperature-now"> </span>  
                 <span id = "unit"> 
-                  <a href="#" id="celcius"> C </a> | 
-                    <a href="#" id="fahrenheit">F </a> 
+                  <a href="#" id="celcius">  C </a> | 
+                    <a href="#" id="fahrenheit"> F </a> 
                   </span> 
                 </span>
                 <br />
@@ -75,101 +75,28 @@
                 </span>
 </p>
             </div>
-        </span>
+    
+        <div class="row weather-forecast" id="forecast">
+          <div class="col-2">
+            <h3>
+              Sun
+            </h3>
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
+              alt=""
+            />
+            <div class="weather-forecast-temperature">
+              <p> <strong>22°</strong> | 17°</p>
+            </div>
           </div>
+          
+        </div>
 
           <br />
           <p id="open-source-link"> <a href="https://github.com/christinab980/she-codes-weather-project"> Open Source </a> by Christina Barron </p>
         </div>
 
-        <div class="col-6">
-          <div class="card w-100">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title">Monday</h5>
-                  <h6 id="tomorrow"> August 17 </h6>
-                </div>
-                <div class="col">
-                  89° | 71°
-                </div>
-                <div class="col">
-                  <span class="weather-emojo">☀️</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card w-100">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title">Tuesday</h5>
-                  <h6>August 18</h6>
-                </div>
-                <div class="col">
-                  89° | 73°
-                </div>
-                <div class="col">
-                  <span class="weather-emojo">☀️</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card w-100">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title">Wednesday</h5>
-                  <h6>August 19</h6>
-                </div>
-                <div class="col">
-                  93°| 71°
-                </div>
-                <div class="col">
-                  <span class="weather-emojo">☀️</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card w-100">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title">Thursday</h5>
-                  <h6>August 20</h6>
-                </div>
-                <div class="col">
-                  93° | 71°
-                </div>
-                <div class="col">
-                  <span class="weather-emojo"> 🌥 </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card w-100">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title">Friday</h5>
-                  <h6>August 21</h6>
-                </div>
-                <div class="col">
-                  93° | 71°
-                </div>
-                <div class="col">
-                  <span class="weather-emojo"> 🌤</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        
     <script src="src/index.js"></script>
   </body>
 </html>
