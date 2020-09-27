@@ -66,6 +66,7 @@ function getCurrentLocation(event) {
 }
 
 function changeDisplay(response) {
+  console.log(response);
   document.querySelector("#location").innerHTML = response.data.name;
   document.querySelector("#temperature-now").innerHTML = Math.round(
     response.data.main.temp
@@ -85,12 +86,11 @@ function changeDisplay(response) {
     response.data.main.temp_min
   );
 
-  document
-    .querySelector("#icon")
-    .setAttribute(
-      "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let form = document.querySelector("#search-form");
