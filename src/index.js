@@ -63,26 +63,26 @@ function formatHours(timestamp) {
 
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
+  forecastElement.innerHTML = null;
+  let forecast = null;
   console.log(forecast);
 
-  forecastElement.innerHTML = `
-  <div class="col-2">
-            <h3>
-              ${formatHours(forecast.dt * 1000)}
-            </h3>
-            <img
-              src= "http://openweathermap.org/img/wn/${
-                forecast.weather[0].icon
-              }@2x.png"
-            />
-            <div class="weather-forecast-temperature">
-              <h4> <strong>${Math.round(
-                forecast.main.temp_max
-              )}° </strong> | ${Math.round(forecast.main.temp_min)}°</h4>
-            </div>
-          </div>
-  `;
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `<div class="col-2">
+          <p>
+            <span class="increment">${formatHours(forecast.dt * 1000)}</span>
+          </p>
+          <img src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png" id="forecast-pic" />
+          <p>
+            ${Math.round(forecast.main.temp_max)} °| ${Math.round(
+      forecast.main.temp_min
+    )}°
+          </p>
+        </div>`;
+  }
 }
 
 // Api's and functions for search engine and temperature
