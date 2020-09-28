@@ -107,6 +107,9 @@ function searchLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(changeDisplay);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getCurrentLocation(event) {
@@ -117,6 +120,7 @@ function getCurrentLocation(event) {
 // Temperature
 
 function changeDisplay(response) {
+  console.log(response);
   document.querySelector("#location").innerHTML = response.data.name;
   document.querySelector("#temperature-now").innerHTML = Math.round(
     response.data.main.temp
@@ -126,16 +130,11 @@ function changeDisplay(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
+
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#feel-like").innerHTML = Math.round(
-    response.data.main.feels_like
-  );
-  document.querySelector("#high").innerHTML = Math.round(
-    response.data.main.temp_max
-  );
-  document.querySelector("#low").innerHTML = Math.round(
-    response.data.main.temp_min
-  );
 
   document
     .querySelector("#icon")

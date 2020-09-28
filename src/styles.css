@@ -92,6 +92,18 @@ button {
   margin: 16px;
 }
 
+.weather-emojo {
+  font-size: 40px;
+}
+
+.fa-search-location {
+  color: #d2b7ae;
+  font-size: 20px;
+}
+#description {
+  text-transform: capitalize;
+}
+
 #forecast {
   margin: 5px;
 }
@@ -108,16 +120,6 @@ button {
   margin: 5px;
 }
 
-.main-weather-emojo {
-  font-size: 100px;
-  margin: 10px;
-}
-
-.weather-emojo {
-  font-size: 40px;
-}
-
-.fa-search-location {
-  color: #d2b7ae;
-  font-size: 20px;
+#icon {
+  line-height: 1;
 }

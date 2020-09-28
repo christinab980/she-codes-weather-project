@@ -46,7 +46,7 @@
       </div>
 
       <div class="row" >
-        <div class="col-8">
+        <div class="col-10">
           <div class="card" style="width: 27rem;">
             <div class="card-body">
               <h1 class="card-title"> 
@@ -56,7 +56,10 @@
                 </h1>
               <span id="current-date-time"> </span> 
               <p class="card-text">
-                <span class="current-temp">High: <span id="high">  </span>°C  |  Low: <span id="low"> </span>°C </span>
+                <span class="todays-temp">
+                  <span id="description"> </span>
+                  </span>
+                
                 <br />
                 <img class="main-weather-emojo" id="icon"> </img>
                 <span class="todays-temp-now"> <span id = "temperature-now"> </span>°
@@ -66,15 +69,14 @@
                     <a href="#" id="fahrenheit"> F </a> 
                   </span> 
                 </span>
-
+                
+                <br/>
+                <span class="todays-temp" >
+                Humidity: <span id="humidity"></span>%
                 <br />
-                <span class="todays-temp">
-                  Feels Like: <span id="feel-like"></span>°C
-                  <br />
-                  Humidity: <span id="humidity"></span>%
-                  <br />
-                  Wind: SW <span id="wind"></span> mph
-                </span>
+                Wind: SW <span id="wind"></span> mph </p>
+              </span> 
+              
               </div>
         
     
