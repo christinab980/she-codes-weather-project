@@ -67,20 +67,19 @@ function displayForecast(response) {
   let forecast = null;
   console.log(forecast);
 
-  for (let index = 0; index < 6; index++) {
+  for (let index = 0; index < 4; index++) {
     forecast = response.data.list[index];
-    forecastElement.innerHTML += `<div class="col-2">
-          <p>
+    forecastElement.innerHTML += `<div class="col-3">
+          <h4>
             <span class="increment">${formatHours(forecast.dt * 1000)}</span>
-          </p>
-          <img src="http://openweathermap.org/img/wn/${
+          </h4> <img src="http://openweathermap.org/img/wn/${
             forecast.weather[0].icon
           }@2x.png" id="forecast-pic" />
-          <p>
+          <h4>
             ${Math.round(forecast.main.temp_max)} °| ${Math.round(
       forecast.main.temp_min
     )}°
-          </p>
+          </h4>
         </div>`;
   }
 }
@@ -108,7 +107,7 @@ function searchLocation(position) {
 
   axios.get(apiUrl).then(changeDisplay);
 
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
