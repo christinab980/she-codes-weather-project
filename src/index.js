@@ -165,7 +165,7 @@ function fahrenheitConversion(event) {
   celciusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  fConversion.innerHTML = Math.round(fahrenheitTemperature) + "°";
+  fConversion.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function celciusConversion(event) {
@@ -173,7 +173,7 @@ function celciusConversion(event) {
   let fConversion = document.querySelector("#temperature-now");
   celciusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  fConversion.innerHTML = Math.round(celciusTemperature) + "°";
+  fConversion.innerHTML = Math.round(celciusTemperature);
 }
 
 let celciusTemperature = null;
